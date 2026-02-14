@@ -1,9 +1,36 @@
+
 {% extends 'base.html.twig' %}
 
 {% block title %}{% endblock %}
 
 {% block body %}
-    <h1>Le Bonheur des Petits GUERRIERS</h1>
-    <button type="button" class="btn btn-danger">Danger</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eius explicabo fugiat praesentium, provident quia quos tempore ullam! Adipisci commodi cupiditate dicta dolore doloribus fuga non obcaecati sit. Temporibus, voluptas!</p>
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade container w-50" style="background-color: black !important; border-radius: 15px; overflow: hidden; padding: 0 !important;">
+  <div class="carousel-inner" style="background-color: black !important; line-height: 0 !important; font-size: 0 !important;">
+    
+    <div class="carousel-item active" style="background-color: black !important; height: 500px;">
+      <img src="{{ asset('pictures/groupe.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Groupe">
+    </div>
+
+    <div class="carousel-item" style="background-color: black !important; height: 500px;">
+      <img src="{{ asset('pictures/joel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Joël">
+    </div>
+
+    <div class="carousel-item" style="background-color: black !important; height: 500px;">
+      <img src="{{ asset('pictures/noel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Noël">
+    </div>
+
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
 {% endblock %}

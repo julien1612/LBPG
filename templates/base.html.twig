@@ -16,7 +16,14 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
+
     <body>
+
+{% block header %}
+    {% include 'partial/header.html.twig' %}
+{% endblock %}
+
         {% block body %}{% endblock %}
+        
     </body>
 </html>
