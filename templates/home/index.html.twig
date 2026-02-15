@@ -1,57 +1,56 @@
-
 {% extends 'base.html.twig' %}
 
 {% block title %}{% endblock %}
 
 {% block body %}
+	<div class="text-justify container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
 
-<div class='container'>
-<h2>Notre histoire</h2>
+		<h2>Notre histoire</h2>
 
-<p>
-Il y a quelques années, un soir, dans le service de neurologie, un enfant rentre de weekend. Il est triste comme chaque dimanche soir. Et il dit à l’équipe : "quand on rentre, on déprime, le service est triste, on a envie de repartir..."
-C'est de cette phrase que tout a démarré.
+		<p>
+			Il y a quelques années, un soir, dans le service de neurologie, un enfant rentre de weekend. Il est triste comme chaque dimanche soir. Et il dit à l’équipe : "quand on rentre, on déprime, le service est triste, on a envie de repartir..."
+			C'est de cette phrase que tout a démarré.<br>
 
-Plusieurs idées fusent dans nos têtes, dont celle-ci : " Et si on montait notre asso pour tous ces petits guerriers qui mènent un combat chaque jour?! "
+			Plusieurs idées fusent dans nos têtes, dont celle-ci : " Et si on montait notre asso pour tous ces petits guerriers qui mènent un combat chaque jour?! "
+			Dès la fin des travaux de rénovation du service de neuro-orthopédie, Azuriane, nous avons notre premier projet en tête, la déco,  mais il nous faut un financement. Nous déposons donc notre dossier à la préfecture pour monter notre association : Le Bonheur des Petits Guerriers.
+			<br>
+			Nous missionnons Pierre Antoine, un petit guerrier de nous dessiner un logo.
+		</p>
 
-Dès la fin des travaux de rénovation du service de neuro-orthopédie, Azuriane, nous avons notre premier projet en tête, la déco,  mais il nous faut un financement. Nous déposons donc notre dossier à la préfecture pour monter notre association : Le Bonheur des Petits Guerriers. 
+		<div class="d-flex justify-content-center align-items-center">
+			<img src="{{ asset('pictures/l1.jpg') }}" class="logo-PA"><img src="{{ asset('pictures/logo.png') }}" class="logo">
+			<p>En parallèle nous nous démenons, des photos, des mesures, des recherches de financements, une cagnotte en ligne, et 6 mois plus tard le résultats est là ! 
+				
+				L’expérience était chouette, nous y avons pris goût, et nous avons encore plein d’idées, c’est ainsi que l’histoire a démarrée...</p>
+		</div>
 
-Nous missionnons Pierre Antoine, un petit guerrier de nous dessiner un logo.  </p>
+	</div>
+	<div id="carouselExampleFade" class="carousel slide carousel-fade container w-50 mt-5 mb-5" style="background-color: black !important; border-radius: 15px; overflow: hidden; padding: 0 !important;">
+		<div class="carousel-inner" style="background-color: black !important; line-height: 0 !important; font-size: 0 !important;">
 
-<img src="{{ asset('pictures/l1.jpg') }}" class="logo-PA"><img src="{{ asset('pictures/logo.png') }}" class="logo">
+			<div class="carousel-item active" style="background-color: black !important; height: 500px;">
+				<img src="{{ asset('pictures/groupe.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Groupe">
+			</div>
 
-<p>En parallèle nous nous démenons, des photos, des mesures, des recherches de financements, une cagnotte en ligne, et 6 mois plus tard le résultats est là ! 
+			<div class="carousel-item" style="background-color: black !important; height: 500px;">
+				<img src="{{ asset('pictures/joel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Joël">
+			</div>
 
-L’expérience était chouette, nous y avons pris goût, et nous avons encore plein d’idées, c’est ainsi que l’histoire a démarrée...</p>
+			<div class="carousel-item" style="background-color: black !important; height: 500px;">
+				<img src="{{ asset('pictures/noel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Noël">
+			</div>
 
-</div>
+		</div>
 
-<div id="carouselExampleFade" class="carousel slide carousel-fade container w-50" style="background-color: black !important; border-radius: 15px; overflow: hidden; padding: 0 !important;">
-  <div class="carousel-inner" style="background-color: black !important; line-height: 0 !important; font-size: 0 !important;">
-    
-    <div class="carousel-item active" style="background-color: black !important; height: 500px;">
-      <img src="{{ asset('pictures/groupe.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Groupe">
-    </div>
-
-    <div class="carousel-item" style="background-color: black !important; height: 500px;">
-      <img src="{{ asset('pictures/joel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Joël">
-    </div>
-
-    <div class="carousel-item" style="background-color: black !important; height: 500px;">
-      <img src="{{ asset('pictures/noel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Noël">
-    </div>
-
-  </div>
-  
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
 
 
 {% endblock %}
