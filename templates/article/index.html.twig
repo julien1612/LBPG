@@ -1,20 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{% block title %}Actualités
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	{% for article in articles %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+		<div class="container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/julienchassin/Documents/LBPG/src/Controller/ArticleController.php</code></li>
-        <li>Your template at <code>/Users/julienchassin/Documents/LBPG/templates/article/index.html.twig</code></li>
-    </ul>
-</div>
+			<div class="justify-content-center d-flex">
+				<h2>{{ article.titre }}</h2>
+			</div>
+			<div class="contenu_article">
+				{{ article.contenu|raw }}
+			</div>
+			<div class="date_article">
+				<em>{{ article.createdAt|date('d/m/Y') }}</em>
+			</div>
+			<div class="justify-content-center d-flex">
+				{% for photo in article.images %}
+					<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" alt="{{ article.titre }}" style="width: 100%; max-width: 400px; margin-bottom: 10px;">
+				{% else %}
+					<p>Aucune photo disponible.</p>
+				{% endfor %}
+			</div>
+			<hr>
+		</div>
+	{% endfor %}
+
 {% endblock %}
