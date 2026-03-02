@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block body %}
+
 	{% for article in articles %}
 
 		<div class="container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
@@ -19,7 +20,7 @@
 			</div>
 			<div class="justify-content-center d-flex">
 				{% for photo in article.images %}
-					<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" alt="{{ article.titre }}" style="width: 100%; max-width: 400px; margin-bottom: 10px;">
+					<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" class="img-fluid p-3" alt="{{ article.titre }}" style="width: 100%; max-width: 400px; margin-bottom: 10px;">
 				{% else %}
 					<p>Aucune photo disponible.</p>
 				{% endfor %}
