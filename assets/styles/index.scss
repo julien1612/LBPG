@@ -11,12 +11,41 @@ body {
 
 .banner {
     width: 100%;
-    height: 60vh; 
-    background-image: url("../../public/pictures/banner.jpg"); 
-    background-size: cover; 
-    background-position: center 11%; 
+    min-height: 300px; 
+    height: 40vh; 
+    background-image: url("../../public/pictures/banner2.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    // On change 'center' par 'flex-end' pour pousser le logo à droite
+    justify-content: flex-end; 
 
+    @media (min-width: 768px) {
+        height: 2%; 
+    }
+
+    .banner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // On ajoute une marge à droite pour que le logo soit dans l'espace jaune
+        padding-right: 2%; 
+        
+        @media (min-width: 1200px) {
+            padding-right: 7%; // Plus d'espace sur les très grands écrans
+        }
+    }
+
+    .banner-logo {
+        width: 150px; // Taille mobile
+        height: auto;
+        filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
+        
+        @media (min-width: 768px) {
+            width: 300px; // Taille ordi
+        }
+    }
+}
