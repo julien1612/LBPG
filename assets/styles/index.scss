@@ -11,41 +11,67 @@ body {
 
 .banner {
     width: 100%;
-    min-height: 300px; 
-    height: 40vh; 
+    min-height: 250px;
+    height: auto; 
+    background-color: #f6d365; 
     background-image: url("../../public/pictures/banner2.png"); 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    
     display: flex;
     align-items: center;
-    // On change 'center' par 'flex-end' pour pousser le logo à droite
-    justify-content: flex-end; 
-
-    @media (min-width: 768px) {
-        height: 2%; 
-    }
+    padding: 30px 0;
 
     .banner-content {
         display: flex;
-        justify-content: center;
+        flex-direction: column; 
         align-items: center;
-        // On ajoute une marge à droite pour que le logo soit dans l'espace jaune
-        padding-right: 2%; 
-        
-        @media (min-width: 1200px) {
-            padding-right: 7%; // Plus d'espace sur les très grands écrans
+        width: 100%;
+        gap: 20px;
+        padding: 0 5%;
+
+        @media (min-width: 992px) {
+            flex-direction: row; 
+            justify-content: space-around; 
+        }
+    }
+
+    .banner-text {
+        color: #000000 !important;
+        font-family: 'Delius', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: clamp(1.3rem, 4vw, 2.5rem) !important;
+        max-width: 520px;
+        margin: 0;
+
+        @media (min-width: 992px) {
+            text-align: left;
         }
     }
 
     .banner-logo {
-        width: 150px; // Taille mobile
+        width: 150px; 
         height: auto;
-        filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
-        
-        @media (min-width: 768px) {
-            width: 300px; // Taille ordi
+        filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+
+        @media (min-width: 992px) {
+            width: 280px; 
         }
+    }
+}
+
+
+h2 {
+    font-size: calc(1.5rem + 1vw);
+    text-align: center;
+    @media (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+.lead {
+    font-size: 1.1rem;
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
     }
 }

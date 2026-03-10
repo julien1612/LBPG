@@ -1,113 +1,103 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Accueil - Le Bonheur des Petits Guerriers{% endblock %}
 
 {% block body %}
-	<div class="text-justify container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
+    <div class="container col-11 col-md-10 col-lg-8 mx-auto shadow-lg" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 30px; margin-bottom: 40px; color: beige;">
+        <h2 class="text-center text-md-start border-bottom border-secondary pb-2">Notre histoire</h2>
 
-		<h2>Notre histoire</h2>
+        <p class="lead mt-4">
+            Il y a quelques années, un soir, dans le service de neurologie, un enfant rentre de weekend.
+            <span class="d-block mt-2">Il est triste comme chaque dimanche soir. Et il dit à l’équipe : "quand on rentre, on déprime, le service est triste, on a envie de repartir..."</span>
+            <span class="d-block mt-3 fw-bold text-warning">C'est de cette phrase que tout a démarré.</span>
+        </p>
 
-<p class="lead mt-5">
-    Il y a quelques années, un soir, dans le service de neurologie, un enfant rentre de weekend.
-    <span class="d-block mt-2">Il est triste comme chaque dimanche soir. Et il dit à l’équipe : "quand on rentre, on déprime, le service est triste, on a envie de repartir..."</span>
-    <span class="d-block mt-2 fw-bold">C'est de cette phrase que tout a démarré.</span>
-</p>
+        <p class="lead">
+            Plusieurs idées fusent dans nos têtes, dont celle-ci : " Et si on montait notre asso pour tous ces petits guerriers qui mènent un combat chaque jour?! "
+            <span class="d-block mt-2">Dès la fin des travaux de rénovation du service de neuro-orthopédie, Azuriane, nous avons notre premier projet en tête, la déco...</span>
+            <span class="d-block mt-2">Nous déposons donc notre dossier à la préfecture pour monter notre association : <strong>Le Bonheur des Petits Guerriers</strong>.</span>
+        </p>
 
-<p class="lead">
-    Plusieurs idées fusent dans nos têtes, dont celle-ci : " Et si on montait notre asso pour tous ces petits guerriers qui mènent un combat chaque jour?! "
-    <span class="d-block mt-2">Dès la fin des travaux de rénovation du service de neuro-orthopédie, Azuriane, nous avons notre premier projet en tête, la déco...</span>
-    <span class="d-block mt-2">Nous déposons donc notre dossier à la préfecture pour monter notre association : <strong>Le Bonheur des Petits Guerriers</strong>.</span>
-</p>
+        <div class="d-flex flex-wrap justify-content-center align-items-center my-4 gap-4">
+            <img src="{{ asset('pictures/l1.jpg') }}" class="img-fluid rounded-circle" style="max-height: 150px; width: auto;" alt="Dessin Pierre-Antoine">
+            <img src="{{ asset('pictures/logo.png') }}" class="img-fluid" style="max-height: 120px; width: auto;" alt="Logo Asso">
+        </div>
 
-<div class="d-flex justify-content-center align-items-center my-4">
-    <img src="{{ asset('pictures/l1.jpg') }}" class="logo-PA me-3">
-    <img src="{{ asset('pictures/logo.png') }}" class="logo">
+        <p class="lead">
+            Nous missionnons Pierre Antoine, un petit guerrier, pour nous dessiner un logo.
+            <span class="d-block mt-2">En parallèle nous nous démenons... et 6 mois plus tard le résultat est là !</span>
+            <span class="d-block mt-3">L’expérience était chouette, nous y avons pris goût, et nous avons encore plein d’idées, <span class="d-block mt-2 italic">c’est ainsi que l’histoire a démarré...</span></span>
+        </p>
+    </div>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade container col-11 col-md-8 col-lg-6 mt-5 mb-5 shadow" style="background-color: black; border-radius: 15px; overflow: hidden; padding: 0 !important;">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 400px;">
+                <img src="{{ asset('pictures/groupe.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Groupe">
+            </div>
+            <div class="carousel-item" style="height: 400px;">
+                <img src="{{ asset('pictures/joel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Joël">
+            </div>
+            <div class="carousel-item" style="height: 400px;">
+                <img src="{{ asset('pictures/noel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Noël">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
+
+    <div class="container col-11 col-md-10 col-lg-8 mx-auto shadow-lg" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 30px; margin-bottom: 40px; color: beige;">
+        <h2 class="text-center text-md-start border-bottom border-secondary pb-2">Présentation</h2>
+
+        <p class="lead mt-4">Créée en juin 2022, l’association <strong>Le Bonheur des Petits Guerriers</strong> s’engage à apporter joie et réconfort aux enfants hospitalisés au Centre Médical Infantile de Romagnat.</p>
+        
+        <p class="lead">Consciente des défis que représente l’hospitalisation pour les plus jeunes, notre mission est d’illuminer leur quotidien en leur offrant des moments de bonheur et d’évasion.</p>
+
+        <p class="fw-bold mt-4 mb-3" style="color: #ffcc00;">Nos objectifs principaux :</p>
+        <ul class="fs-5 ms-3 list-unstyled">
+            <li class="mb-2">✨ Offrir des animations ou sorties ludiques et culturelles.</li>
+            <li class="mb-2">🎁 Offrir du matériel et des jouets pour l'évasion.</li>
+            <li class="mb-2">🤝 Soutenir les familles en créant des moments de partage.</li>
+            <li class="mb-2">👩‍⚕️ Collaborer avec le personnel soignant sur des projets communs.</li>
+        </ul>
+    </div>
+
+    <div class="container my-5">
+    <div class="row justify-content-center align-items-center g-4">
+        <div class="col-10 col-sm-6 col-md-4">
+            <div class="polaroid-wrapper">
+                <img src="{{ asset('pictures/output-onlinetools (1).png') }}" class="img-fluid w-100" alt="Action 1">
+            </div>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4">
+            <div class="polaroid-wrapper">
+                <img src="{{ asset('pictures/output-onlinetools (3).png') }}" class="img-fluid w-100" alt="Action 2">
+            </div>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4">
+            <div class="polaroid-wrapper">
+                <img src="{{ asset('pictures/output-onlinetools (5).png') }}" class="img-fluid w-100" alt="Action 3">
+            </div>
+        </div>
+    </div>
 </div>
 
-<p class="lead">
-    Nous missionnons Pierre Antoine, un petit guerrier, pour nous dessiner un logo.
-    <span class="d-block mt-2">En parallèle nous nous démenons... et 6 mois plus tard le résultat est là !</span>
-    <span class="d-block mt-3">L’expérience était chouette, nous y avons pris goût, et nous avons encore plein d’idées, <span class="d-block mt-2">c’est ainsi que l’histoire a démarré...</span></span>
-</p>
+    <div class="container col-11 col-md-10 col-lg-8 mx-auto shadow-lg" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 30px; margin-bottom: 50px; color: beige;">
+        <h2 class="text-center text-md-start border-bottom border-secondary pb-2">Les petits guerriers</h2>
+        <div class="mt-4 lead">
+            <p>Nos petits guerriers sont des bébés, des enfants et des ados plein de courage, hospitalisés pour un suivi médical et une rééducation intensive.</p>
+            
+            <p>Qu’ils soient là pour de la rééducation orthopédique après des chirurgies lourdes ou pour des raisons neurologiques (AVC, traumatismes, maladies génétiques), ils se battent chaque jour.</p>
 
-	</div>
-	<div id="carouselExampleFade" class="carousel slide carousel-fade container w-50 mt-5 mb-5" style="background-color: black !important; border-radius: 15px; overflow: hidden; padding: 0 !important;">
-		<div class="carousel-inner" style="background-color: black !important; line-height: 0 !important; font-size: 0 !important;">
+            <p class="fst-italic text-center py-3" style="color: #ffcc00;">"Ils vivent tous ensemble dans le même but : aller mieux."</p>
 
-			<div class="carousel-item active" style="background-color: black !important; height: 500px;">
-				<img src="{{ asset('pictures/groupe.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Groupe">
-			</div>
-
-			<div class="carousel-item" style="background-color: black !important; height: 500px;">
-				<img src="{{ asset('pictures/joel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Joël">
-			</div>
-
-			<div class="carousel-item" style="background-color: black !important; height: 500px;">
-				<img src="{{ asset('pictures/noel.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover; display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; vertical-align: middle;" alt="Noël">
-			</div>
-
-		</div>
-
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-
-
-	<div class="text-justify container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
-
-		<h2>Présentation</h2>
-
-		<p class="lead mt-5">Créee en juin 2022, l’association Le Bonheur des Petits Guerriers s’engage à apporter joie et réconfort aux enfants hospitalisés au Centre Médical Infantile de Romagnat.
-
-						<span class="d-block mt-3">Consciente des défis que représente l’hospitalisation pour les plus jeunes, notre association a pour mission d’illuminer leur quotidien en leur offrant des moments de bonheur et d’évasion.</span>
-
-						<span class="d-block mt-3">Loin d’être un simple lieu de soins, le CMI devient grâce à nos actions, un espace où le sourire et la légèreté ont toutes leur place.</span>
-
-						<span class="d-block mt-3">Nos objectifs principaux :</span>
-						</p>
-			<ul class="fs-5 ms-3">
-				<li>Offrir aux enfants hospitalisés des animations ou sorties, ludiques, éducatives ou culturelles.</li>
-				<li>Offrir du matériel et jouets qui leur permets un moment de plaisir ou d’évasion.</li>
-				<li>Apporter du soutien aux familles en redonnant le sourire aux enfants, et en leur créant des moments de partage.</li>
-				<li>Collaborer avec le personnel soignant afin d’améliorer nos interventions et partager des moments de convivialités autour de projets communs.</li>
-
-			</ul>
-		
-
-	</div>
-	<div class="d-flex justify-content-center align-items-center">
-		<img src="{{ asset('pictures/output-onlinetools (1).png') }}" class="img-fluid w-25" alt="Jen_Laura">
-		<img src="{{ asset('pictures/output-onlinetools (3).png') }}" class="img-fluid w-25" alt="Jen_Laura">
-		<img src="{{ asset('pictures/output-onlinetools (5).png') }}" class="img-fluid w-25" alt="Jen_Laura">
-	</div>
-
-	<div class="text-justify container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
-		<h2>Les petits guerriers</h2>
-		<p class="lead mt-5">Nos petits guerriers, qui sont-ils ?
-			
-			<span class="d-block mt-3">Ils sont avant tout : des bébés, des enfants et des ados plein de courage.</span>
-			
-			<span class="d-block mt-3">Dans notre service, ils ont entre 3 et 17 ans, et sont hospitalisés pour un suivi médical et de la rééducation intensive auprès d' une équipe pluridisciplinaire (kinésithérapeute, ergothérapeute, psychomotricienne, psychologue, orthophoniste, diététicienne, Activité Physique et Adapté..)</span>
-
-			<span class="d-block mt-3">Ces jeunes accidentés de la vie ont besoin de rééducation orthopédique intensive. Sans oublier les jeunes qui viennent après des interventions chirurgicales lourdes (pour certaines nécessitant de l'alitement stricte, plâtré, pendant des semaines)</span>
-
-			<span class="d-block mt-3">Il y en a aussi qui viennent pour de la rééducation neurologique : ces petits guerriers ont subis des traumatismes crâniens graves, des AVC, se battent contre des tumeurs, des maladies dégénératives, génétiques ou non étiquetées ...</span>
-			<span class="d-block mt-3">Quelque uns de leurs camarades viennent aussi pour apprendre à gérer leur diabète ou leurs douleurs chroniques.</span>
-
-			<span class="d-block mt-3">Certains vivent avec la maladie ou le handicap depuis toujours, d'autres le découvrent et l'apprivoisent, et puis il y a ceux qui reprennent le cours de leur vie après plusieurs semaines/mois de travail.</span>
-
-			<span class="d-block mt-3">Ils vivent tous ensembles dans le même but : aller mieux.</span>
-			<span class="d-block mt-3">Nous, soignants, nous sommes là pour faire le maximum afin de les aider à tendre vers ce mieux, et les faire sourire.</span>
-
-			<span class="d-block mt-3">On rit, on chante, on blague, mais il nous manque cette petite touche de couleur pour rajouter une dose de pep's !</span>
-
-			<span class="d-block mt-3">Comme expliqué dans un précédent post, "Le bonheur des petits guerriers" est là dans le but de monter des projets pour leurs apporter un petit quelque chose en plus, et les mettre dans les meilleurs conditions possibles pour atteindre leurs objectifs.</span>
-		</p>
-	</div>
+            <p>Nous, soignants, sommes là pour les faire sourire. Mais il nous manquait cette touche de couleur pour rajouter une dose de pep's ! C'est là que l'association intervient pour leur offrir le petit "plus" nécessaire à leur combat.</p>
+        </div>
+    </div>
 {% endblock %}

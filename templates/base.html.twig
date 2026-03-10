@@ -23,11 +23,15 @@
             {% include 'partial/header.html.twig' %}
         {% endblock %}
 
-        <div class="banner mb-5">
-            <div class="banner-content">
-                <img src="{{ asset('pictures/logo.png') }}" alt="Logo Association" class="banner-logo">
-            </div>
-        </div>
+   <section class="banner mb-5">
+    <div class="banner-content">
+        <h1 class="banner-text">
+            Quand la force d'une asso <br> 
+            devient le sourire d'un enfant
+        </h1>
+        <img src="{{ asset('pictures/logo.png') }}" class="banner-logo" alt="Logo">
+    </div>
+</section>
 
         <div class="container"> 
             {% block body %}{% endblock %}

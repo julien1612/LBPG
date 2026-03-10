@@ -1,5 +1,36 @@
 
 .color-footer {
-  background-color:  rgb(48, 48, 46);
+    background-color: rgb(48, 48, 46) !important;
+    color: beige;
 
+    .address-text {
+        line-height: 1.4;
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; 
+        
+        @media (max-width: 768px) {
+            gap: 10px;
+        }
+    }
+
+    .footer-link {
+        color: beige !important;
+        text-decoration: none !important;
+        font-size: 0.9rem;
+        padding: 5px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #ffcc00 !important;
+            text-decoration: underline !important;
+        }
+    }
+    
+    .text-beige { color: beige; }
 }
