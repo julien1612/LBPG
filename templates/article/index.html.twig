@@ -4,29 +4,42 @@
 {% endblock %}
 
 {% block body %}
+	<div class="container padding 30px">
+		{% for article in articles %}
+			<div class="row justify-content-center mb-5">
+				<div class="col-11 col-md-10 col-lg-8 shadow-lg p-4 p-md-5" style="background-color: rgb(48, 48, 48); border-radius: 15px; color: white;">
 
-	{% for article in articles %}
+					<h2 class="text-center text-md-start border-bottom border-secondary pb-2 mb-4">
+						{{ article.titre }}
+					</h2>
 
-		<div class="container w-75" style="background-color:rgb(48, 48, 46); border-radius: 15px; padding: 20px; margin-bottom: 30px;">
+					<div class="contenu_article mb-4">
+						{{ article.contenu|raw }}
+					</div>
 
-			<div class="justify-content-center d-flex">
-				<h2>{{ article.titre }}</h2>
+					<div class="date_article mb-4">
+						<small class="text-muted">
+							<em>Publié le
+								{{ article.createdAt|date('d/m/Y') }}</em>
+						</small>
+					</div>
+
+					<div class="row g-3 justify-content-center">
+						{% for photo in article.images %}
+							<div class="col-12 col-sm-6">
+								<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" class="img-fluid rounded shadow-sm" alt="{{ article.titre }}" style="width: 100%; height: 250px; object-fit: cover;">
+							</div>
+						{% else %}
+							<div class="col-12 text-center">
+								<p class="text-muted italic">Aucune photo disponible.</p>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
 			</div>
-			<div class="contenu_article">
-				{{ article.contenu|raw }}
-			</div>
-			<div class="date_article">
-				<em>{{ article.createdAt|date('d/m/Y') }}</em>
-			</div>
-			<div class="justify-content-center d-flex">
-				{% for photo in article.images %}
-					<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" class="img-fluid p-3" alt="{{ article.titre }}" style="width: 100%; max-width: 400px; margin-bottom: 10px;">
-				{% else %}
-					<p>Aucune photo disponible.</p>
-				{% endfor %}
-			</div>
-			<hr>
+		{% endfor %}
+		<div class="navigation d-flex justify-content-center mb-5">
+			{{ knp_pagination_render(articles) }}
 		</div>
-	{% endfor %}
-
+	</div>
 {% endblock %}
