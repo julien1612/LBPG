@@ -1,0 +1,11 @@
+
+input, textarea, select {
+    border-radius: 20px !important; /* Très arrondi */
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+input:focus, select:focus {
+    border-color: #28a745; /* Vert comme ton asso */
+    box-shadow: none;
+}
