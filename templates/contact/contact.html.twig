@@ -1,43 +1,76 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact
+{% endblock %}
 
 {% block body %}
-<div class="container my-5">
-{# Affichage du message de succès #}
-{% for message in app.flashes('success') %}
-    <div class="alert alert-success mt-3 rounded-pill text-center shadow-sm">
-        {{ message }}
-    </div>
-{% endfor %}
-    {{ form_start(contactForm) }}
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                {{ form_row(contactForm.prenom) }}
-            </div>
-            <div class="col-md-6 mb-3">
-                {{ form_row(contactForm.nom) }}
-            </div>
-        </div>
+	<div class="container">
+		<h2 class="text-center mt-5 mb-4">Contactez-nous</h2>
 
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                {{ form_row(contactForm.email) }}
-            </div>
-            <div class="col-md-6 mb-3">
-                {# Tu peux ajouter le champ téléphone ici #}
-            </div>
-        </div>
+		<div id="carouselExampleFade" class="carousel slide carousel-fade container col-11 col-md-8 col-lg-6 mt-5 mb-5 shadow" style="background-color: black; border-radius: 15px; overflow: hidden; padding: 0 !important;">
+			<div class="carousel-inner">
+				<div class="carousel-item active" style="height: 400px;">
+					<img src="{{ asset('pictures/carousel2_1.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+				</div>
+				<div class="carousel-item" style="height: 400px; background-color: #000;">
+					<img src="{{ asset('pictures/carousel2_2.jpeg') }}" class="d-block w-100 h-100" style="object-fit: contain;" alt="Photo de l'association">
+				</div>
+				<div class="carousel-item" style="height: 400px;">
+					<img src="{{ asset('pictures/carousel2_3.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+				</div>
+				<div class="carousel-item" style="height: 400px;">
+					<img src="{{ asset('pictures/carousel2_4.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+				</div>
+				<div class="carousel-item" style="height: 400px;">
+					<img src="{{ asset('pictures/carousel2_5.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Précédent</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Suivant</span>
+			</button>
+		</div>
 
-        <div class="mb-3">
-            {{ form_row(contactForm.vous_etes) }}
-        </div>
+		<div class="row justify-content-center mb-5">
+			<div class="col-11 col-md-10 col-lg-8 shadow-lg p-4 p-md-5" style="background-color: rgb(48, 48, 48); border-radius: 15px; color: white;">
+				{% for message in app.flashes('success') %}
+					<div class="alert alert-warning mt-3 rounded-pill text-center shadow-sm">
+						{{ message }}
+					</div>
+				{% endfor %}
+				<h2 class="text-center mb-5">Dites-nous tout !<span class="d-block mt-2">On vous répond dès que possible</span>
+				</h2>
+				{{ form_start(contactForm) }}
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						{{ form_row(contactForm.prenom) }}
+					</div>
+					<div class="col-md-6 mb-3">
+						{{ form_row(contactForm.nom) }}
+					</div>
 
-        <div class="mb-3">
-            {{ form_row(contactForm.message) }}
-        </div>
+					<div class="col-12 mb-3">
+						{{ form_row(contactForm.email) }}
+					</div>
 
-        <button type="submit" class="btn btn-primary rounded-pill px-4">Envoyer</button>
-    {{ form_end(contactForm) }}
-</div>
+					<div class="col-12 mb-3">
+						{{ form_row(contactForm.vous_etes) }}
+					</div>
+
+					<div class="col-12 mb-3">
+						{{ form_row(contactForm.message) }}
+					</div>
+
+					<div class="col-12 text-center mt-3">
+						<button type="submit" class="btn nav-btn-soutenir">Envoyer</button>
+					</div>
+				</div>
+				{{ form_end(contactForm) }}
+			</div>
+		</div>
+	</div>
 {% endblock %}

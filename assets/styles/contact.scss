@@ -1,11 +1,32 @@
-
 input, textarea, select {
-    border-radius: 20px !important; /* Très arrondi */
+    width: 100%; 
+    border-radius: 20px !important;
     border: 1px solid #ccc;
     padding: 10px 20px;
+    background-color: white; 
+    display: block;
 }
 
-input:focus, select:focus {
-    border-color: #28a745; /* Vert comme ton asso */
-    box-shadow: none;
+textarea {
+    min-height: 150px; 
+    resize: vertical; 
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(240, 220, 3, 0.25); 
+    outline: none;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.alert-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+    border: none;
 }
