@@ -1,7 +1,11 @@
-
 .color-footer {
-    background-color: rgb(48, 48, 46) !important;
-    color: beige;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: beige !important;
 
     .address-text {
         line-height: 1.4;
@@ -9,11 +13,11 @@
 
     .footer-nav-links {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: center;
         gap: 15px;
-        flex-wrap: wrap; 
-        
+        flex-wrap: wrap;
+
         @media (max-width: 768px) {
             gap: 10px;
         }
@@ -31,6 +35,8 @@
             text-decoration: underline !important;
         }
     }
-    
-    .text-beige { color: beige; }
+
+    .text-beige {
+        color: beige;
+    }
 }

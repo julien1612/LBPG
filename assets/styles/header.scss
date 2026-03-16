@@ -1,32 +1,37 @@
-
 .color-nav {
-    background-color: rgb(48, 48, 46) !important;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: beige !important;
     padding: 10px 0;
 }
 
 .logo-header {
-    width: 60px; 
+    width: 60px;
     height: auto;
-    
+
     @media (min-width: 992px) {
-        width: 80px; 
+        width: 80px;
     }
 }
 
 .titleH1 {
     color: beige !important;
     font-family: "Delius", cursive;
-    font-weight: 700; 
-    white-space: nowrap; 
-    
+    font-weight: 700;
+    white-space: nowrap;
+
     @media (min-width: 992px) {
-        font-size: 2.5rem !important; 
+        font-size: 2.5rem !important;
         letter-spacing: 1px;
     }
 
     @media (max-width: 576px) {
         font-size: 1.1rem !important;
-        white-space: normal; 
+        white-space: normal;
         line-height: 1.2;
     }
 }
@@ -36,7 +41,8 @@
     font-size: 1.1rem;
     transition: all 0.3s ease;
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
         color: #ffcc00 !important;
         text-decoration: underline;
     }
@@ -57,10 +63,10 @@
         color: #ffcc00 !important;
         border-color: #ffcc00;
         text-decoration: none !important;
-        transform: translateY(-2px); 
+        transform: translateY(-2px);
     }
 
-    
+
     @media (max-width: 991px) {
         margin-top: 15px;
         display: inline-block;
