@@ -1,28 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact
-{% endblock %}
+{% block title %}Contact - Le Bonheur des Petits Guerriers{% endblock %}
 
 {% block body %}
 	<div class="container">
 		<h2 class="text-center mt-5 mb-4">Contactez-nous</h2>
 
-		<div id="carouselExampleFade" class="carousel slide carousel-fade container col-11 col-md-8 col-lg-6 mt-5 mb-5 shadow" style="background-color: black; border-radius: 15px; overflow: hidden; padding: 0 !important;">
+		<div id="carouselExampleFade" class="carousel slide carousel-fade container col-11 col-md-8 col-lg-6 mt-5 mb-5 shadow" data-bs-ride="carousel" data-bs-interval="5000" style="background-color: black; border-radius: 15px; overflow: hidden; padding: 0 !important;">
 			<div class="carousel-inner">
 				<div class="carousel-item active" style="height: 400px;">
-					<img src="{{ asset('pictures/carousel2_1.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+					<img src="{{ asset('pictures/carousel2_1.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="foot">
 				</div>
 				<div class="carousel-item" style="height: 400px; background-color: #000;">
-					<img src="{{ asset('pictures/carousel2_2.jpeg') }}" class="d-block w-100 h-100" style="object-fit: contain;" alt="Photo de l'association">
+					<img src="{{ asset('pictures/carousel2_2.jpeg') }}" class="d-block w-100 h-100" style="object-fit: contain;" alt="groupe de filles">
 				</div>
 				<div class="carousel-item" style="height: 400px;">
-					<img src="{{ asset('pictures/carousel2_3.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+					<img src="{{ asset('pictures/carousel2_3.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="selfie filles">
 				</div>
 				<div class="carousel-item" style="height: 400px;">
-					<img src="{{ asset('pictures/carousel2_4.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+					<img src="{{ asset('pictures/carousel2_4.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="spectacle">
 				</div>
 				<div class="carousel-item" style="height: 400px;">
-					<img src="{{ asset('pictures/carousel2_5.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="">
+					<img src="{{ asset('pictures/carousel2_5.jpeg') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="le groupe">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

@@ -23,7 +23,7 @@ final class ContactController extends AbstractController
             $contactData = $form->getData();
 
             $email = (new TemplatedEmail())
-                ->from('noreply@tonsite.fr') // CONSEIL : Utilise une adresse de ton domaine ici
+                ->from('noreply@tonsite.fr') 
                 ->replyTo($contactData['email']) 
                 ->to('contact@trait-d-union.fr')
                 ->subject('Nouveau message de contact : ' . $contactData['nom'])

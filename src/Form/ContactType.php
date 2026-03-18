@@ -32,9 +32,9 @@ public function buildForm(FormBuilderInterface $builder, array $options): void
         ->add('vous_etes', ChoiceType::class, [
             'label' => 'Vous êtes *',
             'choices' => [
-                'Un particulier' => 'particulier',
-                'Une structure' => 'structure',
-                'Un bénévole' => 'benevole',
+                'Un particulier' => 'un particulier',
+                'Un professionnel' => 'un professionnel',
+                'Une association' => 'une association',
             ],
             'placeholder' => 'Vous êtes',
         ])
