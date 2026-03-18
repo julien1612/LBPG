@@ -1,9 +1,18 @@
 body {
 
-background: linear-gradient(135deg, #281c2b 0.000%, #33282e 16.667%, #413839 33.333%, #504632 50.000%, #614e2a 66.667%, #744d33 83.333%, #894338 100.000%);
+    background: linear-gradient(135deg, #281c2b 0.000%, #33282e 16.667%, #413839 33.333%, #504632 50.000%, #614e2a 66.667%, #744d33 83.333%, #894338 100.000%);
 }
 
-.delius-regular, h1, h2, p, a, li, .contenu_article, .date_article, em, label {
+.delius-regular,
+h1,
+h2,
+p,
+a,
+li,
+.contenu_article,
+.date_article,
+em,
+label {
     font-family: "Delius", cursive;
     font-weight: 400;
     font-style: normal;
@@ -13,9 +22,9 @@ background: linear-gradient(135deg, #281c2b 0.000%, #33282e 16.667%, #413839 33.
 .banner {
     width: 100%;
     min-height: 250px;
-    height: auto; 
-    background-color: #f6d365; 
-    background-image: url("../../public/pictures/banner2.png"); 
+    height: auto;
+    background-color: #f6d365;
+    background-image: url("../../public/pictures/banner2.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -24,22 +33,22 @@ background: linear-gradient(135deg, #281c2b 0.000%, #33282e 16.667%, #413839 33.
 
     .banner-content {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         width: 100%;
         gap: 20px;
         padding: 0 5%;
 
         @media (min-width: 992px) {
-            flex-direction: row; 
-            justify-content: space-around; 
+            flex-direction: row;
+            justify-content: space-around;
         }
     }
 
     .banner-text {
         color: #000000 !important;
         font-family: 'Delius', cursive;
-        font-weight: bold;
+       -webkit-text-stroke: 2px #000000;
         text-align: center;
         font-size: clamp(1.3rem, 4vw, 2.5rem) !important;
         max-width: 520px;
@@ -51,28 +60,37 @@ background: linear-gradient(135deg, #281c2b 0.000%, #33282e 16.667%, #413839 33.
     }
 
     .banner-logo {
-        width: 150px; 
-        height: auto;
-        filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+        width: 300px; 
+        height: 300px;
+        object-fit: cover; 
 
-        @media (min-width: 992px) {
-            width: 280px; 
+        border-radius: 30px;
+
+        transform: rotate(-3deg);
+
+        filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: rotate(0deg) scale(1.05); 
         }
     }
-}
 
+    h2 {
+        font-size: calc(1.5rem + 1vw);
+        text-align: center;
 
-h2 {
-    font-size: calc(1.5rem + 1vw);
-    text-align: center;
-    @media (min-width: 768px) {
-        text-align: left;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
-}
 
-.lead {
-    font-size: 1.1rem;
-    @media (min-width: 768px) {
-        font-size: 1.25rem;
+    .lead {
+        font-size: 1.1rem;
+
+        @media (min-width: 768px) {
+            font-size: 1.25rem;
+        }
     }
 }

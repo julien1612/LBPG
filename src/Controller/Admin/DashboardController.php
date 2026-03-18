@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
+use App\Entity\FlashInfo;
 
 
 #[AdminDashboard(routePath: '/admin', routeName: 'admin')]
@@ -52,5 +53,6 @@ $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
 
         // 2. LE LIEN VERS TES ARTICLES (C'est ça qui crée le menu !)
         yield MenuItem::linkToCrud('Actualités', 'fas fa-newspaper', Article::class);
+        yield MenuItem::linkToCrud('Flash Info', 'fas fa-bolt', FlashInfo::class);
     }
 }
