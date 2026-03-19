@@ -20,9 +20,12 @@
 				<li class="nav-item">
 					<a class="nav-link color-link {{ app.request.get('_route') == 'app_contact' ? 'active' : '' }}" href="{{ path('app_contact') }}">Contact</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link color-link {{ app.request.get('_route') == 'app_soutenir' ? 'active' : '' }}" href="{{ path('app_soutenir') }}">Nous soutenir</a>
+				</li>
 				<li class="nav-item d-flex align-items-center">
 					<a class="nav-link nav-btn-soutenir px-4 ms-lg-3" href="https://www.helloasso.com/associations/le-bonheur-des-petits-guerriers">
-						Nous soutenir
+						Faire un don
 					</a>
 				</li>
 			</ul>

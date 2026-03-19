@@ -1,0 +1,76 @@
+/* assets/styles/soutenir.scss */
+
+// 1. Styles globaux
+.bg-white h3,
+.bg-white p {
+    color: #000000 !important;
+}
+
+// 2. Correction des tableaux (Le & est maintenant BIEN imbriqué)
+.carte-soutien {
+    box-shadow: 0 5px 10px beige !important;
+
+    table {
+        font-family: 'Delius', cursive;
+
+        &.table-bordered { // Le & est valide ici car il est dans 'table'
+            border: 3px solid #000000;
+            td, th {
+                border: 3px solid #000000;
+            }
+        }
+    }
+}
+
+// 3. Section Don
+.don-card-link {
+    text-decoration: none !important;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 40px 0;
+
+    &:hover {
+        transform: scale(1.01);
+        .don-card-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('../../public/pictures/main:main.webp') no-repeat center;
+        }
+    }
+}
+
+.don-card-bg {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../../public/pictures/main:main.webp') no-repeat center;
+    background-size: cover;
+    transition: background 0.3s ease;
+}
+
+.don-card-content {
+    text-align: center;
+    color: white !important;
+    h2 {
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-top: 10px;
+        color: white !important;
+    }
+    p {
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+}
+
+.heart-icon svg {
+    fill: #e63946 !important;
+    color: #e63946 !important;
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 10px rgba(230, 57, 70, 0.8));
+    transition: transform 0.3s ease;
+}
