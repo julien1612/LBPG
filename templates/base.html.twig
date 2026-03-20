@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="L'association Le Bonheur des Petits Guerriers apporte de la joie et du soutien aux enfants hospitalisés en service de neurologie. Découvrez notre histoire et nos actions.">
-		<meta name="keywords" content="association, enfants malades, neurologie, petits guerriers, solidarité">
-		<title>
-			{% block title %}Le Bonheur des Petits Guerriers
-			{% endblock %}
-		</title>
+<html lang="fr"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="L'association Le Bonheur des Petits Guerriers apporte de la joie et du soutien aux enfants hospitalisés au CMI de Romagnat.">
+        
+        <meta property="og:title" content="Le Bonheur des Petits Guerriers">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Soutien aux enfants hospitalisés en neurologie.">
+        <meta property="og:image" content="{{ asset('pictures/logo.webp') }}">
 
+        <title>{% block title %}Le Bonheur des Petits Guerriers{% endblock %}</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
 
-		{% block stylesheets %}
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
-		{% block javascripts %}
-			{{ encore_entry_script_tags('app') }}
-		{% endblock %}
-	</head>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
 
-	<body>
-		{% block header %}
-			{% include 'partial/header.html.twig' %}
-		{% endblock %}
+    <body>
+        {% block header %}
+            {% include 'partial/header.html.twig' %}
+        {% endblock %}
 
-		<section class="banner mb-5">
-			<div class="banner-content">
-				<h1 class="banner-text">
-					{% if flash is defined and flash is not null and flash.isActive %}
-						{{ flash.content|raw }}
-					{% else %}
-						Quand la force d'une asso
-						<br>
-						devient le sourire d'un enfant
-					{% endif %}
-				</h1>
+        <section class="banner mb-5">
+            <div class="banner-content">
+                <h1 class="banner-text">
+                    {% if flash is defined and flash is not null and flash.isActive %}
+                        {{ flash.content|raw }}
+                    {% else %}
+                        <span class="visually-hidden">Association Le Bonheur des Petits Guerriers : </span>
+                        Quand la force d'une asso
+                        <br>
+                        devient le sourire d'un enfant
+                    {% endif %}
+                </h1>
 
-				{% if flash and flash.isActive and flash.image %}
-					<img src="{{ asset('pictures/' ~ flash.image) }}" class="banner-logo" alt="Flash Info" >
-				{% else %}
-					<img src="{{ asset('pictures/logo.png') }}" class="banner-logo" alt="Logo">
-				{% endif %}
-			</div>
-		</section>
+                {% if flash and flash.isActive and flash.image %}
+                    <img src="{{ asset('pictures/' ~ flash.image) }}" class="banner-logo" alt="Actualité : {{ flash.content|striptags }}" loading="eager">
+                {% else %}
+                    <img src="{{ asset('pictures/logo.webp') }}" class="banner-logo" alt="Logo de l'association Le Bonheur des Petits Guerriers" loading="eager">
+                {% endif %}
+            </div>
+        </section>
 
-		<div class="container"> {% block body %}{% endblock %}
-			</div>
+        <main class="container"> 
+            {% block body %}{% endblock %}
+        </main>
 
-			{% block footer %}
-				{% include 'partial/footer.html.twig' %}
-			{% endblock %}
-		</body>
-	</html>
+        {% block footer %}
+            {% include 'partial/footer.html.twig' %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Actualités - Le Bonheur des Petits Guerriers{% endblock %}
+{% block title %}Actualités - Le Bonheur des Petits Guerriers
+{% endblock %}
 
 {% block body %}
 	<div class="container">
 		{% for article in articles %}
 			<div class="row justify-content-center mb-5">
-	<div class="container col-11 col-md-10 col-lg-8 mx-auto custom-card">
+				<div class="container col-11 col-md-10 col-lg-8 mx-auto custom-card">
 
 					<h2 class="text-center text-md-start border-bottom border-secondary pb-2 mb-4">
 						{{ article.titre }}
@@ -26,7 +27,7 @@
 					<div class="row g-3 justify-content-center">
 						{% for photo in article.images %}
 							<div class="col-12 col-sm-6">
-								<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" class="img-fluid rounded shadow-sm" alt="{{ article.titre }}" style="width: 100%; height: 250px; object-fit: cover;">
+								<img src="{{ asset('uploads/pictures/' ~ photo.nom) }}" class="img-fluid rounded shadow-sm" alt="Illustration de l'article : {{ article.titre }}" width="400" height="250" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy">
 							</div>
 						{% else %}
 							<div class="col-12 text-center">

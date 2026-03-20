@@ -25,7 +25,7 @@ label {
     min-height: 250px;
     height: auto;
     background-color: #f6d365;
-    background-image: url("../../public/pictures/banner2.png");
+    background-image: url("../../public/pictures/banner2.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -93,5 +93,22 @@ label {
         @media (min-width: 768px) {
             font-size: 1.25rem;
         }
+    }
+}
+
+.carousel-item-custom {
+    height: 200px; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%; 
+}
+
+@media (min-width: 768px) {
+    .carousel-item-custom {
+        height: 400px;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        width: 15%;
     }
 }

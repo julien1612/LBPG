@@ -1,19 +1,16 @@
-/* assets/styles/soutenir.scss */
 
-// 1. Styles globaux
 .bg-white h3,
 .bg-white p {
     color: #000000 !important;
 }
 
-// 2. Correction des tableaux (Le & est maintenant BIEN imbriqué)
 .carte-soutien {
     box-shadow: 0 5px 10px beige !important;
 
     table {
         font-family: 'Delius', cursive;
 
-        &.table-bordered { // Le & est valide ici car il est dans 'table'
+        &.table-bordered { 
             border: 3px solid #000000;
             td, th {
                 border: 3px solid #000000;
@@ -22,7 +19,16 @@
     }
 }
 
-// 3. Section Don
+.bg-beige-custom {
+    background-color: #f5f5dc !important; 
+    color: #212529 !important;           
+
+    h3, p, i, svg {
+        color: #212529 !important;
+        fill: #212529 !important; 
+    }
+}
+
 .don-card-link {
     text-decoration: none !important;
     display: block;
@@ -30,6 +36,7 @@
     border-radius: 20px;
     overflow: hidden;
     margin: 40px 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 
     &:hover {
         transform: scale(1.01);
