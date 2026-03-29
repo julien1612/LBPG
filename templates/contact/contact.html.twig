@@ -1,42 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact - Le Bonheur des Petits Guerriers{% endblock %}
+{% block title %}Contact - Le Bonheur des Petits Guerriers
+{% endblock %}
 
 {% block body %}
 	<div class="container">
 		<h2 class="text-center mt-5 mb-4">Contactez-nous</h2>
 
 		<div id="carouselExampleFade" class="carousel slide carousel-fade container col-11 col-md-8 col-lg-6 mt-5 mb-5 shadow" data-bs-ride="carousel" data-bs-interval="5000" style="background-color: black; border-radius: 15px; overflow: hidden; padding: 0 !important;">
-    <div class="carousel-inner">
-        <div class="carousel-item active carousel-item-custom">
-            <img src="{{ asset('pictures/carousel2_1.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Groupe">
-        </div>
-        <div class="carousel-item carousel-item-custom">
-            <img src="{{ asset('pictures/carousel2_2.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="trail" loading="lazy">
-        </div>
-        <div class="carousel-item carousel-item-custom">
-            <img src="{{ asset('pictures/carousel2_3.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Noël" loading="lazy">
-        </div>
-        <div class="carousel-item carousel-item-custom">
-            <img src="{{ asset('pictures/carousel2_4.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="spectacle" loading="lazy">
-        </div>
-        <div class="carousel-item carousel-item-custom" style="overflow: hidden;">
-            <img src="{{ asset('pictures/carousel2_5.webp') }}" class="d-block w-100 h-100" style="object-fit: contain; transform: scale(1.3); transform-origin: center 20%;" alt="les filles" loading="lazy">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Précédent</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Suivant</span>
-    </button>
-</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active carousel-item-custom">
+					<img src="{{ asset('pictures/carousel2_1.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Groupe">
+				</div>
+				<div class="carousel-item carousel-item-custom">
+					<img src="{{ asset('pictures/carousel2_2.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="trail" loading="lazy">
+				</div>
+				<div class="carousel-item carousel-item-custom">
+					<img src="{{ asset('pictures/carousel2_3.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Noël" loading="lazy">
+				</div>
+				<div class="carousel-item carousel-item-custom">
+					<img src="{{ asset('pictures/carousel2_4.webp') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="spectacle" loading="lazy">
+				</div>
+				<div class="carousel-item carousel-item-custom" style="overflow: hidden;">
+					<img src="{{ asset('pictures/carousel2_5.webp') }}" class="d-block w-100 h-100" style="object-fit: contain; transform: scale(1.3); transform-origin: center 20%;" alt="les filles" loading="lazy">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Précédent</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Suivant</span>
+			</button>
+		</div>
 
 
 		<div class="row justify-content-center mb-5">
-	<div class="container col-11 col-md-10 col-lg-8 mx-auto custom-card">
+			<div class="container col-11 col-md-10 col-lg-8 mx-auto custom-card">
 				{% for message in app.flashes('success') %}
 					<div class="alert alert-warning mt-3 rounded-pill text-center shadow-sm">
 						{{ message }}
@@ -65,12 +66,20 @@
 						{{ form_row(contactForm.message) }}
 					</div>
 
-					<div class="col-12 text-center mt-3">
-						<button type="submit" class="btn nav-btn-soutenir">Envoyer</button>
+					<div class="col-12 mb-3">
+						<p style="color: #d1d1d1; font-size: 0.8rem; font-style: italic; font-weight: 300; line-height: 1.3; font-family: 'Open Sans', sans-serif;">
+							* Ce site ne collecte vos données que pour répondre à vos messages et ne les partage jamais. 
+							    En cliquant sur envoyer, vous acceptez que vos informations soient utilisées uniquement pour vous recontacter. 
+							    Vos données sont conservées pendant une durée maximale de 3 ans après notre dernier échange.
+						</p>
 					</div>
 				</div>
-				{{ form_end(contactForm) }}
+
+				<div class="col-12 text-center mt-3">
+					<button type="submit" class="btn nav-btn-soutenir">Envoyer</button>
+				</div>
 			</div>
+			{{ form_end(contactForm) }}
 		</div>
 	</div>
-{% endblock %}
+</div>{% endblock %}
