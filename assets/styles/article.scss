@@ -8,3 +8,33 @@
     width: 100%;
     overflow-x: auto;
 }
+
+
+.pagination .page-link {
+    background-color: beige; 
+    color: #000000 !important;              
+    border: 1px solid rgba(0, 0, 0, 0.3); 
+    padding: 8px 16px;
+}
+
+.pagination .page-link:hover {
+    background-color: #e5c069;
+    color: beige !important;
+    border-color: #f1ede4;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #e5c069;    
+    border-color: #000000;
+    color: #000000 !important;               
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #c5c5c3;
+    color: rgba(0, 0, 0, 0.3) !important; 
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
