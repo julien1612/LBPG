@@ -11,7 +11,7 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class ContactController extends AbstractController
-{ 
+{
 
     #[Route('/contact', name: 'app_contact')]
     public function index(Request $request, MailerInterface $mailer): Response
@@ -23,9 +23,9 @@ final class ContactController extends AbstractController
             $contactData = $form->getData();
 
             $email = (new TemplatedEmail())
-                ->from('noreply@tonsite.fr') 
-                ->replyTo($contactData['email']) 
-                ->to('contact@trait-d-union.fr')
+                ->from('contact@yemu2298.odns.fr')
+                ->replyTo($contactData['email'])
+                ->to("Lebonheurdespetitsguerriers@outlook.fr")
                 ->subject('Nouveau message de contact : ' . $contactData['nom'])
                 ->htmlTemplate('emails/contact_email.html.twig')
                 ->context([
@@ -44,7 +44,7 @@ final class ContactController extends AbstractController
         }
 
         return $this->render('contact/contact.html.twig', [
-            'contactForm' => $form->createView(), 
+            'contactForm' => $form->createView(),
         ]);
     }
-} 
+}
