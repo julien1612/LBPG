@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lien vers ton sitemap pour aider les robots
+Sitemap: https://lebonheurdespetitsguerriers.fr/sitemap.xml
